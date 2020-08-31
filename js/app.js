@@ -1,15 +1,21 @@
-console.log('Rock the dragon.');
+// console.log('Rock the dragon.');
 
-$(() => {
-$.ajax({
-  url: 'https://dragon-ball-api.herokuapp.com/api/',
-  type: 'GET',
-  data: {
-    '$limit' : 15,
-  }
-}).then(data => {
-  alert('There are ' + data.length + ' from the planet of ' + planet + ' !')
-  console.log(data)
-})
+$(()=>{
+    $('form').on('submit', (event)=>{
 
+        event.preventDefault();
+
+        const userInput = $('input[type="text"]').val();
+
+        $.ajax({
+            url:'https://dragon-ball-api.herokuapp.com/api/planet/' + userInput
+        }).then(
+            (data)=>{
+                $('#residents').html(data.residents);
+            },
+            ()=>{
+                console.log('bad');
+            }
+        );
+    })
 })
