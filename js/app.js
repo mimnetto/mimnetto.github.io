@@ -1,12 +1,15 @@
     $(() => {
 
     // ACNH URL
-    let link = `http://acnhapi.com/v1/villagers/`
+    let link = `http://acnhapi.com/v1a/villagers/`
 
     $.ajax({
       url: link,
       type: "GET",
       dataType: "json",
+      data: {
+        maxResults: 10,
+      },
 
     }).then(villagers => {
     for (let villager of villagers) {
