@@ -18,7 +18,7 @@ $(()=>{
 
               console.log(data);
               apiData = data.results;
-                $('#name') .html(data.name['name-USen']);
+                $('#name').html(data.name['name-USen']);
 
             },
             ()=>{

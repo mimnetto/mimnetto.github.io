@@ -1,43 +1,42 @@
-// console.log('Rock the dragon.');
+$(() => {
+  $('form').on('submit',event => {
+  event.preventDefault()
+  //grab the text from the input box and store in variable
 
-const utc = new Date();
-console.log(utc.toDateString());
-
-$(()=>{
-    $('form').on('submit', (event)=>{
-
-        event.preventDefault();
-
-        const userInput = $('input[type="text"]').val();
-
-        $.ajax({
-            url:'http://acnhapi.com/v1a/villagers/' + userInput,
-            type: 'GET',
-            dataType: "json",
-        }).then(
-          (data)=>{
-
-            console.log(data);
-            ancData = data.results;
-
-            const $villagers = $('.villagers')
+  let userInput = $('input[type="text"]').val()
+  console.log(userInput);
 
 
-            const $div = $('<div>').appendTo($villagers)
+  //grab the borough bases on the id of the clicked button store that as well
+  // let species = $(event.target).attr('id')
+  // console.log(species);
+  //set ID bsed on borough clicked
 
-            const $h3 = $('<h3>').text(data.name['name-USen'])
-            .appendTo($div)
+  let link = `http://acnhapi.com/v1a/villagers/`
 
-            const $image =
-            $('<img>')
-            .attr('src',(data.image_uri))
-            .appendTo($div)
+  $.ajax({
+    url: link,
+    type: "GET",
 
 
-          },
-            ()=>{
-                console.log('Womp womp');
-            }
-        );
-    })
+  }).then(villagers => {
+    for (let villager of villagers){
+      const $villagers = $('.villagers')
+
+
+      const $div = $('<div>').appendTo($villagers)
+
+      const $h3 = $('<h3>').text(villager.name['name-USen'])
+      .appendTo($div)
+
+      const $image =
+      $('<img>')
+      .attr('src',(villager.image_uri))
+      .appendTo($div)
+
+
+    }
+
+  })
+ })
 })
