@@ -131,7 +131,7 @@ h5.personality {
 
 /* modal */
 
-#modal {
+.modal {
 	background-color: rgba(0,0,0,0.4);
 	position: fixed;
 	top: 0;
@@ -140,7 +140,6 @@ h5.personality {
 	width: 100%;
 	z-index: 1;
 	overflow: auto;
-  display: none;
 }
 
 #modal-textbox {

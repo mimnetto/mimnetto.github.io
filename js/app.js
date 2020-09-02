@@ -19,13 +19,15 @@ $(() => {
       .appendTo($villagers)
       .on('click', event => {
         $(event.currentTarget)
-        $('#modal').show()
-        $children()
+        $($modal).show()
       })
 
       const $modal = $("<div>")
-      .attr("ID", "modal")
+      .attr("ID", villager.id) //make sure the modal shows correct villager
+      .addClass("modal")
+      .css('display', 'none')
       .appendTo($div);
+
 
       const $textbox = $("<div>")
       .attr("ID", "modal-textbox")
@@ -33,13 +35,11 @@ $(() => {
 
       const $close = $("<a>")
       .addClass("modalClose")
-      .attr("ID", "close")
       .attr("href", "#")
       .html("<p>Close</p>")
       .appendTo($textbox)
       .on('click', event => {
-        $(event.currentTarget)
-        $('#modal').css('display', 'none')
+        $($modal).css('display', 'none')
       })
 
       const $name = $("<h3>")
@@ -63,7 +63,7 @@ $(() => {
       .appendTo($textbox)
 
       const $birthday = $('<p>')
-      .text(villager.birthday)
+      .text(villager["birthday-string"])
       .addClass('birthday')
       .appendTo($textbox)
 
