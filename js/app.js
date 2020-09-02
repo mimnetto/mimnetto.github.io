@@ -16,7 +16,12 @@ $(() => {
       const $div = $("<div>")
       .addClass("profile")
       .attr("ID", "openModal")
-      .appendTo($villagers);
+      .appendTo($villagers)
+      .on('click', event => {
+        $(event.currentTarget)
+        $('#modal').show()
+        $children()
+      })
 
       const $modal = $("<div>")
       .attr("ID", "modal")
@@ -28,11 +33,18 @@ $(() => {
 
       const $close = $("<a>")
       .addClass("modalClose")
+      .attr("ID", "close")
       .attr("href", "#")
+      .html("<p>Close</p>")
       .appendTo($textbox)
+      .on('click', event => {
+        $(event.currentTarget)
+        $('#modal').css('display', 'none')
+      })
 
-      const $name = $("h3")
+      const $name = $("<h3>")
       .addClass("name")
+      .html("<p>Name:</p>")
       .text(villager.name["name-USen"])
       .appendTo($textbox)
 
@@ -66,10 +78,10 @@ $(() => {
       .addClass('gender')
       .appendTo($textbox)
 
-      // const $phrase = $('<p>')
-      // .text(villager.catch-phrase)
-      // .addClass('phrase')
-      // .appendTo($textbox)
+      const $phrase = $('<p>')
+      .text(villager["catch-phrase"])
+      .addClass('phrase')
+      .appendTo($textbox)
 
 
 

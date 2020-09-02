@@ -6,7 +6,7 @@ const $modal = $('#modal');
 const $closeBtn = $('#close');
 
 //Event Handlers
-const openModal = () => {
+const modal = () => {
   $modal.css('display', 'block');
 }
 
