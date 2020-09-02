@@ -21,13 +21,11 @@ body {
 
 header {
   background: rgb(13, 203, 218);
-  background: linear-gradient(
-    180deg,
+  background: linear-gradient(180deg,
     rgba(13, 203, 218, 1) 2%,
     rgba(161, 226, 231, 1) 68%,
     rgba(208, 241, 243, 1) 84%,
-    rgba(255, 255, 255, 0) 100%
-  );
+    rgba(255, 255, 255, 0) 100%);
   font-family: jumble, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -59,15 +57,16 @@ header {
   margin-bottom: 2%;
 }
 
-.profile > h3 {
+.profile>h3 {
   text-align: center;
   background: white;
   border: gold solid;
   box-shadow: 2px 2px 4px;
   margin: 1px;
+  padding: 1%;
 }
 
-.profile > img {
+.profile>img {
   width: 100%;
   max-width: 200px;
   height: auto;
@@ -121,35 +120,88 @@ h1.centerhe {
 }
 
 /* personality */
-
 h5.personality {
   text-align: center;
-    margin: 5px;
-    text-shadow: 2px 2px 4px #fff;
-    color: blueviolet;
+  margin: 5px;
+  text-shadow: 2px 2px 4px #fff;
+  color: blueviolet;
 }
 
 /* modal */
-
 .modal {
-	background-color: rgba(0,0,0,0.4);
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 1;
-	overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
   display: none;
 }
 
 #modal-textbox {
-	background-color: white;
-	width: 50%;
-	border-radius: 2px;
-	margin: 150px auto;
-  padding: 2%;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  width: 30%;
+  margin: 150px auto;
+  padding: 1% 2% 1% 4%;
+  border-radius: 25px;
+  background: #E8F8EB;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* modal child classes */
+p.modalClose {
+  text-align: end;
+  margin: 1%;
+  font-family: jumble, sans-serif;
+  font-size: 21px;
+  margin-top: 0px;
+  text-transform: uppercase;
+}
+
+.info {
+      margin-top: 3%;
+}
+
+.name {
+  margin: 5px auto 5px auto;
+}
+
+.jpn {
+  margin: 5px auto 15px auto;
+}
+
+.icon {
+  float: left;
+  margin: -20px 5% auto auto;
+}
+
+mark.type {
+  background-color: #B795C4;
+  padding: 1%;
+  border-radius: 5pc;
+  color: white;
+  font-size: 10pt;
+  font-weight: 900;
+}
+
+/* stats */
+.stats {
+  display: block;
+  padding-top: 3%;
+}
+
+div.stats {
+  1px gold solid;
+}
+
+.stats h4 {
+  float: left;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.stats p {
+  text-align: end;
+}

@@ -34,55 +34,66 @@ $(() => {
       .attr("ID", "modal-textbox")
       .appendTo($modal);
 
-      const $close = $("<a>")
+
+
+      const $close = $("<p>")
       .addClass("modalClose")
       // .attr("href", "#")
-      .html("<p>Close</p>")
+      .text("X Close")
       .appendTo($textbox)
       .on('click', event => {
-        $($modal).css('display', 'none')
+      $($modal).css('display', 'none')
       })
 
-      const $name = $("<h3>")
-      .addClass("name")
-      .html("<p>Name:</p>")
-      .text(villager.name["name-USen"])
-      .appendTo($textbox)
-
-      const $jname = $("<h4>")
-      .text(villager.name["name-JPja"])
+      const $info = $("<div>")
+      .addClass('infos')
       .appendTo($textbox)
 
       const $icon = $("<img>")
       .addClass("icon")
       .attr("src", villager.icon_uri)
-      .appendTo($textbox)
+      .appendTo($info)
 
-      const $type = $('<h5>')
+      const $name = $("<h3>")
+      .addClass("name")
+      .html("<p>Name:</p>")
+      .text(villager.name["name-USen"])
+      .appendTo($info)
+
+      const $jname = $("<h4>")
+      .text(villager.name["name-JPja"])
+      .addClass("jpn")
+      .appendTo($info)
+
+      const $type = $('<mark>')
       .text(villager.personality)
       .addClass('type')
+      .appendTo($info)
+
+      const $stats = $('<div>')
+      .addClass('stats')
       .appendTo($textbox)
 
-      const $birthday = $('<p>')
-      .text(villager["birthday-string"])
+      const $birthday = $('<div>')
+      .html("<h4>Birthday:</h4> <p>\"" + villager["birthday-string"] + "\"<p>")
       .addClass('birthday')
-      .appendTo($textbox)
+      .appendTo($stats)
 
 
-      const $species = $('<p>')
-      .text(villager.species)
+      const $species = $('<div>')
+      .html("<h4>Species:</h4> <p>\"" + villager.species + "\"<p>")
       .addClass('species')
-      .appendTo($textbox)
+      .appendTo($stats)
 
-      const $gender = $('<p>')
-      .text(villager.gender)
+      const $gender = $('<div>')
+      .html("<h4>Gender:</h4> <p>\"" + villager.gender + "\"<p>")
       .addClass('gender')
-      .appendTo($textbox)
+      .appendTo($stats)
 
-      const $phrase = $('<p>')
-      .text(villager["catch-phrase"])
+      const $phrase = $('<div>')
+      .html("<h4>Catch Phrase:</h4> <p>\"" + villager["catch-phrase"] + "\"<p>")
       .addClass('phrase')
-      .appendTo($textbox)
+      .appendTo($stats)
 
       //villagers profiles
       const $h3 = $("<h3>")
