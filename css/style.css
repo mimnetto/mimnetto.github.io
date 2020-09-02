@@ -126,4 +126,28 @@ h5.personality {
   text-align: center;
     margin: 5px;
     text-shadow: 2px 2px 4px #fff;
+    color: blueviolet;
+}
+
+/* modal */
+
+#modal {
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	overflow: auto;
+  display: none;
+}
+
+#modal-textbox {
+	background-color: white;
+	height: 350px;
+	width: 550px;
+	border-radius: 2px;
+	margin: 150px auto;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
