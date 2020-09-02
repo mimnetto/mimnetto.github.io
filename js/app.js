@@ -13,6 +13,7 @@ $(() => {
       const $villagers = $(".villagers");
 
       // modal
+
       const $div = $("<div>")
       .addClass("profile")
       .attr("ID", "openModal")
@@ -26,7 +27,7 @@ $(() => {
       .attr("ID", villager.id) //make sure the modal shows correct villager
       .addClass("modal")
       .css('display', 'none')
-      .appendTo($div);
+      .appendTo('body');
 
 
       const $textbox = $("<div>")
@@ -35,7 +36,7 @@ $(() => {
 
       const $close = $("<a>")
       .addClass("modalClose")
-      .attr("href", "#")
+      // .attr("href", "#")
       .html("<p>Close</p>")
       .appendTo($textbox)
       .on('click', event => {
@@ -82,9 +83,6 @@ $(() => {
       .text(villager["catch-phrase"])
       .addClass('phrase')
       .appendTo($textbox)
-
-
-
 
       //villagers profiles
       const $h3 = $("<h3>")

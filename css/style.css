@@ -140,6 +140,7 @@ h5.personality {
 	width: 100%;
 	z-index: 1;
 	overflow: auto;
+  display: none;
 }
 
 #modal-textbox {
