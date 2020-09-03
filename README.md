@@ -1,6 +1,4 @@
-![Animal Crossing](/img/nookabel.png)
-
-# Animal Crossing Villager App!
+![Animal Crossing](/img/nookabel.png)  #Animal Crossing Villager App!
 
 _By Mimi Netto_
 
