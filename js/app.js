@@ -7,9 +7,10 @@ $(() => {
     type: "GET",
     dataType: "json",
   }).then((villagers) => {
-    const sliceArr = villagers.slice(0, 50); //displays only first 50
+    // const sliceArr = villagers.slice(0, 50); //displays only first 50
     // console.log(sliceArr);
-    for (let villager of sliceArr) {
+    // for (let villager of sliceArr) {
+    for (let villager of villagers) {
       const $villagers = $(".villagers");
 
       // modal
@@ -39,7 +40,7 @@ $(() => {
       const $close = $("<p>")
       .addClass("modalClose")
       // .attr("href", "#")
-      .text("X Close")
+      .text("X")
       .appendTo($textbox)
       .on('click', event => {
       $($modal).css('display', 'none')
@@ -54,15 +55,16 @@ $(() => {
       .attr("src", villager.icon_uri)
       .appendTo($info)
 
-      const $name = $("<h3>")
+      const $name = $("<div>")
       .addClass("name")
-      .html("<p>Name:</p>")
-      .text(villager.name["name-USen"])
+      .html("<h3>&#x1F1FA;&#x1F1F8; " + villager.name["name-USen"] + "</h3>")
+      // .text(villager.name["name-USen"])
       .appendTo($info)
 
-      const $jname = $("<h4>")
-      .text(villager.name["name-JPja"])
+      const $jname = $("<div>")
       .addClass("jpn")
+      .html("<h5>&#x1F1EF;&#x1F1F5; " + villager.name["name-JPja"] + "</h5>")
+
       .appendTo($info)
 
       const $type = $('<mark>')

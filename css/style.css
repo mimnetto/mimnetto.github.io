@@ -10,9 +10,9 @@ body {
 }
 
 /* For responisve pages*/
-@-ms-viewport {
+/* @-ms-viewport {
   width: device-width;
-}
+} */
 
 #mainwrap {
   min-height: 100%;
@@ -124,7 +124,7 @@ h5.personality {
   text-align: center;
   margin: 5px;
   text-shadow: 2px 2px 4px #fff;
-  color: blueviolet;
+  color: #B795C4;
 }
 
 /* modal */
@@ -141,34 +141,40 @@ h5.personality {
 }
 
 #modal-textbox {
-  background-color: white;
-  width: 30%;
+  width: 65%;
   margin: 150px auto;
-  padding: 1% 2% 1% 4%;
+  padding: 1% 2% 1% 2%;
   border-radius: 25px;
   background: #E8F8EB;
+  border: 10px gold solid;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 800px) {
+  #modal-textbox {
+  width: 30%;
+ }
 }
 
 /* modal child classes */
 p.modalClose {
   text-align: end;
-  margin: 1%;
+  margin: 0;
   font-family: jumble, sans-serif;
-  font-size: 21px;
+  font-size: 28px;
   margin-top: 0px;
   text-transform: uppercase;
 }
 
-.info {
-      margin-top: 3%;
+.infos {
+  margin-top: -35px;
 }
 
-.name {
+.name h3{
   margin: 5px auto 5px auto;
 }
 
-.jpn {
+.jpn h5{
   margin: 5px auto 15px auto;
 }
 
@@ -190,10 +196,11 @@ mark.type {
 .stats {
   display: block;
   padding-top: 3%;
+  clear: left;
 }
 
-div.stats {
-  1px gold solid;
+.stats div{
+border-bottom:  1px gold solid;
 }
 
 .stats h4 {
@@ -204,4 +211,8 @@ div.stats {
 
 .stats p {
   text-align: end;
+}
+
+div.phrase {
+  border-bottom: 0;
 }
