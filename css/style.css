@@ -9,11 +9,6 @@ body {
   font-family: sans-serif;
 }
 
-/* For responisve pages*/
-/* @-ms-viewport {
-  width: device-width;
-} */
-
 #mainwrap {
   min-height: 100%;
   position: relative;
@@ -35,6 +30,7 @@ header {
   /* sticky sticky icky */
   top: 0;
   width: 100%;
+  padding-bottom: 2%;
 }
 
 #content {
@@ -54,7 +50,7 @@ header {
 
 .profile {
   margin: 1%;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
 }
 
 .profile>h3 {
@@ -64,6 +60,10 @@ header {
   box-shadow: 2px 2px 4px;
   margin: 1px;
   padding: 1%;
+  font-family: cafeteria, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 18pt;
 }
 
 .profile>img {
@@ -113,7 +113,7 @@ p.centerpar {
 /* center a paragraph*/
 h1.centerhe {
   text-align: center;
-  margin: 3%;
+  margin: 1% 5%;
   text-transform: uppercase;
   color: gold;
   text-shadow: 2px 2px 4px #000;
@@ -124,7 +124,11 @@ h5.personality {
   text-align: center;
   margin: 5px;
   text-shadow: 2px 2px 4px #fff;
-  color: #B795C4;
+  color: forestgreen;
+  font-family: cafeteria, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 13pt;
 }
 
 /* modal */
@@ -152,8 +156,8 @@ h5.personality {
 
 @media screen and (min-width: 800px) {
   #modal-textbox {
-  width: 30%;
- }
+    width: 40%;
+  }
 }
 
 /* modal child classes */
@@ -170,11 +174,14 @@ p.modalClose {
   margin-top: -35px;
 }
 
-.name h3{
+.name h1 {
   margin: 5px auto 5px auto;
+  font-family: cafeteria, sans-serif;
+  font-weight: 900;
+  font-style: normal;
 }
 
-.jpn h5{
+.jpn h5 {
   margin: 5px auto 15px auto;
 }
 
@@ -199,18 +206,25 @@ mark.type {
   clear: left;
 }
 
-.stats div{
-border-bottom:  1px gold solid;
+.stats div {
+  border-bottom: 1px gold solid;
 }
 
-.stats h4 {
+.stats h3 {
   float: left;
   margin: 0;
   text-transform: uppercase;
+  font-family: cafeteria, sans-serif;
+  font-weight: 900;
+  font-style: normal;
 }
 
 .stats p {
   text-align: end;
+  font-family: cafeteria, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13pt;
 }
 
 div.phrase {
@@ -219,14 +233,9 @@ div.phrase {
 
 .buttons {
   margin-top: 7%;
-    display: flex;
-    justify-content: center;
-    margin-left: 50%;
-    margin-right: auto;
-    position: fixed;
-}
-
-
-#sort {
-      background-color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-left: 50%;
+  margin-right: auto;
+  position: fixed;
 }

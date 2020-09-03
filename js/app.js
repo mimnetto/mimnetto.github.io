@@ -10,10 +10,10 @@ $(() => {
     dataType: "json",
 
   }).then((villagers) => {
-    // const sliceArr = villagers.slice(0, 50); //displays only first 50
+    const sliceArr = villagers.slice(41, 141); //displays only 100 villagers
     // console.log(sliceArr);
-    // for (let villager of sliceArr) {
-    for (let villager of villagers) {
+    for (let villager of sliceArr) {
+    // for (let villager of villagers) {
       const $villagers = $(".villagers");
 
       // modal
@@ -38,8 +38,6 @@ $(() => {
       .attr("ID", "modal-textbox")
       .appendTo($modal);
 
-
-
       const $close = $("<p>")
       .addClass("modalClose")
       // .attr("href", "#")
@@ -60,7 +58,7 @@ $(() => {
 
       const $name = $("<div>")
       .addClass("name")
-      .html("<h3>&#x1F1FA;&#x1F1F8; " + villager.name["name-USen"] + "</h3>")
+      .html("<h1>&#x1F1FA;&#x1F1F8; " + villager.name["name-USen"] + "</h1>")
       // .text(villager.name["name-USen"])
       .appendTo($info)
 
@@ -80,23 +78,23 @@ $(() => {
       .appendTo($textbox)
 
       const $birthday = $('<div>')
-      .html("<h4>Birthday:</h4> <p>\"" + villager["birthday-string"] + "\"<p>")
+      .html("<h3>Birthday:</h3> <p>" + villager["birthday-string"] + "</p>")
       .addClass('birthday')
       .appendTo($stats)
 
 
       const $species = $('<div>')
-      .html("<h4>Species:</h4> <p>\"" + villager.species + "\"<p>")
+      .html("<h3>Species:</h3> <p>" + villager.species + "</p>")
       .addClass('species')
       .appendTo($stats)
 
       const $gender = $('<div>')
-      .html("<h4>Gender:</h4> <p>\"" + villager.gender + "\"<p>")
+      .html("<h3>Gender:</h3> <p>" + villager.gender + "</p>")
       .addClass('gender')
       .appendTo($stats)
 
       const $phrase = $('<div>')
-      .html("<h4>Catch Phrase:</h4> <p>\"" + villager["catch-phrase"] + "\"<p>")
+      .html("<h3>Catch Phrase:</h3> <p>\"" + villager["catch-phrase"] + "\"</p>")
       .addClass('phrase')
       .appendTo($stats)
 
@@ -115,13 +113,5 @@ $(() => {
         .attr("src", villager.image_uri)
         .appendTo($div);
     }
-    // $(window).on("scroll", function() {
-    //   var scrollHeight = $(document).height();
-    //   var scrollPos = $(window).height() + $(window).scrollTop();
-    //   if(((scrollHeight - 100) >= scrollPos) / scrollHeight == 0){
-    //     $('.load-more-villagers').click();
-    //     console.log("bottom!");
-    //   }
-    // });
     })
   });
