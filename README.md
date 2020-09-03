@@ -2,8 +2,6 @@
 
 ![Animal Crossing](/img/nookabel.png)   _By Mimi Netto_
 
-API Used: [ACNH API](http://acnhapi.com/)
-
 ## Minimum Viable Product
 
 - [x] Built with HTML, CSS, JavaScript and jQuery
@@ -15,25 +13,35 @@ API Used: [ACNH API](http://acnhapi.com/)
 - [x] Have one or more complex user interface modules
 
 ## Technologies and Approach
-* 
-  *
+* API
+  * [ACNH API](http://acnhapi.com/)
 * Responsive Design
-  * I used @media and 
+  * I used media quarries and percentages when possible
+* Graphics and Animations
+  * I really wanted to use the CSS Animations
+    * The ballon graphics were previously made by me via photoshop  
 * Modal
-  * I've used modals before but this was the first one I made from scratch
+  * I've used modals before but this was the first one I made from scratch.
 
 ### Struggles
-* Modal Indexing
-  * This was one of my biggest struggles. 
+* Modal Index
+  * This was one of my biggest struggles. Even though the HTML changed in the console it would only show the first Villager on click. I eventually found I had to five each modal a unique ID (villager.id) and append them to the body instead of model div.
 
-### Failed Attemps 
+### Failed Attempts
 
-* Orginal API
-  * I orginally wanted to use a Dragon Ball API but could not get it to work. I'm not sure why.
+* Original API
+  * I originally wanted to use a Dragon Ball API but could not get it to work. I'm still not sure why.
 * Infinite Scrolling
-  * I could get it to console.log when it reached the bottom of the page but it would not stop calling the 
+  * I could get it to console.log when it reached the bottom of the page but it would not stop calling the
+* Sorting by species
+  * I tried to make buttons that would split() the villagers by species but I could only get them to console.log on click and it logged them five times every click
+
+### Other Notes
+* Since there are over 400 villagers I used split() to only display 100 of them, starting with the cats because they're really cute.
+* I used an [old template](https://github.com/mimnetto/simple-starter-templates) of mine to get started on the css
+* The only time I asked for help is when I needed to know if something I was trying to do was actually possible. I was told this API is bare bones and some things might not work.
+* Please forgive spelling mistakes and typos on this README. This is the last thing I'm doing for this project and my brain is very fried. OTL
 
 ![ga](/img/gaLogo.png) <br>
 
 For General Assembly SEIR 810 Moss!
-
