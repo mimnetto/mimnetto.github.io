@@ -1,10 +1,10 @@
+![Animal Crossing](/img/nookabel.png)
+
 # Animal Crossing Villager App!
 
 _By Mimi Netto_
 
-![Animal Crossing](/img/nookabel.png)
-
-[ACNH API](http://acnhapi.com/)
+API Used: [ACNH API](http://acnhapi.com/)
 
 - [x] Built with HTML, CSS, JavaScript and jQuery
 - [x] Hosted on github pages
@@ -14,5 +14,8 @@ _By Mimi Netto_
 - [x] Implement responsive design
 - [x] Have one or more complex user interface modules
 
-For General Assembly SEIR 810 Moss!
+
 ![ga](/img/gaLogo.png) <br>
+
+For General Assembly SEIR 810 Moss!
+
