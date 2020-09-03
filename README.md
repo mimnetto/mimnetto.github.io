@@ -12,9 +12,13 @@
 - [x] Implement responsive design
 - [x] Have one or more complex user interface modules
 
-## Technologies and Approach
+## Technologies, Approaches, Fails and Wins
+
+### Tech & Approaches
+
 * API
   * [ACNH API](http://acnhapi.com/)
+    * I used the URL that sorted them by array (https://acnhapi.com/v1a/), the one that was nested JSON (https://acnhapi.com/v1/) didn't work for the Villagers.
 * Responsive Design
   * I used media quarries and percentages when possible
     * I only used media quarries for the text box. Percentages worked fine for the rest of it.
@@ -37,7 +41,7 @@
 * Original API
   * I originally wanted to use a Dragon Ball API but could not get it to work. I'm still not sure why.
 * Infinite Scrolling
-  * I could get it to console.log when it reached the bottom of the page but it would not stop loading the Villagers. I eventually had to admit defeat.
+  * I could get it to console.log when it reached the bottom of the page but it would not stop loading the Villagers. Many of the solutions I found required use of PHP and I was not ready to mess with that. I eventually had to admit defeat.
 * Sorting by species
   * I tried to make buttons that would split() the villagers by species but I could only get them to console.log on click and it logged them five times every click.
 * Birthday App
@@ -47,6 +51,7 @@
 
 * Super stocked about how much my jQuery improve during this project!
 * I enjoyed this project a lot. I've been going through ups and downs with this class but knowing I could do something like this, all from scratch, really reaffirmed my desire to become a developer.
+* I'm really happy with my modal designs. I've worked a lot with CSS in the past but thought I had lost my touch. This class had helped me understand the more technical side of it and what the attributes actually mean. I'm excited to see myself improving again.
 
 ### Other Notes
 
@@ -57,6 +62,7 @@
 * Fonts from Adobe
 * The only time I asked for help is when I needed to know if something I was trying to do was actually possible. I was told this API is bare bones and some things might not work.
 * Please forgive spelling mistakes and typos on this README. This is the last thing I'm doing for this project and my brain is very fried. OTL
+* I went from playing ACNH 10 hours day to 20 minutes a day (if I'm lucky)
 
 ![ga](/img/gaLogo.png) <br>
 
