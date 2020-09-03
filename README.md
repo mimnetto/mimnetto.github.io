@@ -28,6 +28,8 @@
 * Modals
   * Even though the HTML changed in the console it would only show the first Villager data on click. I eventually found I had to five each modal a unique ID (villager.id)
   * It took me forever to get them to close! Eventually I found it since was it was inside of the model div more then one handler was being called. I had append them to the body instead.
+* github
+  * I ran into some issues pushing to github. Thats the only reason there were not pushes on Tuesday. I thought it was because I added the README via the browser or from changing directory names locally but I think was pushing from the wrong folder. 
 
 ### Failed Attempts
 
@@ -37,6 +39,11 @@
   * I could get it to console.log when it reached the bottom of the page but it would not stop loading the Villagers. I eventually had to admit defeat.
 * Sorting by species
   * I tried to make buttons that would split() the villagers by species but I could only get them to console.log on click and it logged them five times every click.
+
+### Wins!
+
+* Super stocked about how much my jQuery improve during this project!
+* I enjoyed this project a lot. I've been going through ups and downs with this class but knowing I could do something like this, all from scratch, really reaffirmed my desire to become a developer.
 
 ### Other Notes
 
