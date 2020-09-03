@@ -216,3 +216,17 @@ border-bottom:  1px gold solid;
 div.phrase {
   border-bottom: 0;
 }
+
+.buttons {
+  margin-top: 7%;
+    display: flex;
+    justify-content: center;
+    margin-left: 50%;
+    margin-right: auto;
+    position: fixed;
+}
+
+
+#sort {
+      background-color: #fff;
+}

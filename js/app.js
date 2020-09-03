@@ -2,10 +2,13 @@ $(() => {
   // ACNH URL
   let link = `https://acnhapi.com/v1a/villagers/`;
 
+
+
   $.ajax({
     url: link,
     type: "GET",
     dataType: "json",
+
   }).then((villagers) => {
     // const sliceArr = villagers.slice(0, 50); //displays only first 50
     // console.log(sliceArr);
@@ -112,5 +115,13 @@ $(() => {
         .attr("src", villager.image_uri)
         .appendTo($div);
     }
+    // $(window).on("scroll", function() {
+    //   var scrollHeight = $(document).height();
+    //   var scrollPos = $(window).height() + $(window).scrollTop();
+    //   if(((scrollHeight - 100) >= scrollPos) / scrollHeight == 0){
+    //     $('.load-more-villagers').click();
+    //     console.log("bottom!");
+    //   }
+    // });
+    })
   });
-});
